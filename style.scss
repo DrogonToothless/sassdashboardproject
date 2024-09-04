@@ -3,11 +3,26 @@
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: "basic-sans", sans-serif;
+    font-weight: 400;
     // outline: 2px solid red;
 }
 
 .container {
+    background-color: #dadfea;
     display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    padding: 2.5vmin; 
+
+    .sidebar-info {
+        margin-bottom: 2vmin;
+    }
+    .sidebar-search {
+        margin-bottom: 2vmin;
+    }
 }
 
 header {
