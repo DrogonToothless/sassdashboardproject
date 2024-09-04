@@ -72,20 +72,17 @@ nav {
     width: 30px;
     height: 30px;
 }
-.profile {
-    width: 200px;
-    height: 50px;
-    background-color: blue;
+.card {
+    width: 50%;
     display: flex;
-    justify-content: space-around;
-    h1 {
-        font-size: variables.$textsizemedium;
-        justify-self: center;
-    }
+    flex-direction: column;
 }
-.profilepicture {
-    width: 50px;
-    height: 50px;
-    border-radius: 30px;
+.top-row .middle-row .bottom-row {
+    display: flex;
+}
+.expand-arrow {
+    width: 30px;
+    height: 30px;
     background-color: black;
+    border-radius: 20px;
 }
