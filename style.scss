@@ -1,29 +1,39 @@
-@use '_variables';
+@use 'variables';
+
 * {
     margin: 0;
     box-sizing: border-box;
+    // outline: 2px solid red;
 }
+
+.container {
+    display: flex;
+}
+
 header {
     width: 100%;
     height: 80px;
     display: flex;
 }
+
 .logo {
     width: 100px;
     height: 100px;
     background-image: url(images/bird-colorful-logo-gradient-vector_343694-1365.avif);
     background-size: 100px 100px;
 }
+
 .searchbar {
     width: 400px;
     height: 35px;
     #searchbar {
         width: 100%;
         height: 100%;
-        border: 1px solid $lightgrayblue;
+        border: 1px solid variables.$lightgrayblue;
         border-radius: 40px;
     }
 }
+
 nav {
     height: 25px;
     ul {
@@ -31,8 +41,8 @@ nav {
         li {
             list-style-type: none;
             display: inline;
-            font-family: $textfont;
-            font-size: $textsizemedium;
+            font-family: variables.$textfont;
+            font-size: variables.$textsizemedium;
         }
     }
 }
