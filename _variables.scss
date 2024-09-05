@@ -6,3 +6,12 @@ $textsizemedium: 20px;
 -------------------COLORS-------------------
 ----------------------------------------- */
 $lightgrayblue: rgb(174, 174, 174);
+$sidebarGray: #838490;
+
+
+
+@mixin sidebar-type {
+    font-family: "articulat-cf", sans-serif;
+    font-weight: 600;
+    color: #626373;
+}
