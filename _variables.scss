@@ -1,13 +1,13 @@
 $textfont: Arial;
 $textsizemedium: 20px;
-
-
 /* -----------------------------------------
 -------------------COLORS-------------------
 ----------------------------------------- */
 $lightgrayblue: rgb(174, 174, 174);
+$blue: rgb(39, 111, 211);
+$lightblue: rgb(159, 201, 255);
+$white: rgb(255, 255, 255);
 $sidebarGray: #838490;
-
 
 
 @mixin sidebar-type {

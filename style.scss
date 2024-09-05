@@ -6,7 +6,9 @@
     box-sizing: border-box;
     // outline: 2px solid red;
 }
-
+.main {
+    width: 100%;
+}
 .container {
     background-color: #F5F7F9;
     display: flex;
@@ -21,7 +23,10 @@
     .sidebar-search {
         margin-bottom: 2vh;
         input {
+            border: none;
+            border-radius: 4px;
             padding: 5px;
+
         }
     }
 
@@ -38,7 +43,7 @@
         transition: 250ms ease;
         background-color: rgba(0, 0, 0, 0.1);
     }
-    .sidebar-tab:active {
+    .sidebar-tab:active, .sidebar-tab:focus {
         color: #4A4B52;
         background-color: #fff;
     }
@@ -94,20 +99,50 @@ nav {
     width: 30px;
     height: 30px;
 }
-.profile {
-    width: 200px;
-    height: 50px;
-    background-color: blue;
+.content {
+    background-color: variables.$white;
+}
+.card {
+    width: 300px;
     display: flex;
+    flex-direction: column;
+    background-color: variables.$blue;
+    padding-top: 10px;
+    color: variables.$white;
+    border-radius: 15px;
+}
+.top-row, .middle-row, .bottom-row {
+    display: flex;
+}
+.top-row {
     justify-content: space-around;
+    padding-bottom: 20px;
+    font-weight: normal;
+}
+.middle-row {
+    padding-left: 11.5%;
+    padding-bottom: 5px;
     h1 {
-        font-size: variables.$textsizemedium;
-        justify-self: center;
+        font-size: 30px;
     }
 }
-.profilepicture {
-    width: 50px;
-    height: 50px;
-    border-radius: 30px;
-    background-color: black;
+.expand-arrow {
+    width: 30px;
+    height: 30px;
+    background-color: variables.$lightblue;
+    border-radius: 20px;
+    padding-left: 3px;
+    padding-top: 2px;
+}
+.bottom-row {
+    padding-left: 11.5%;
+    padding-bottom: 5px;
+    p {
+        font-weight: lighter;
+        padding-left: 5px;
+    }
+}
+.increase {
+    background-color: variables.$lightblue;
+    border-radius: 20px;
 }
