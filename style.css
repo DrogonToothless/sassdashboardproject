@@ -74,15 +74,32 @@ nav ul li {
   width: 50%;
   display: flex;
   flex-direction: column;
+  background-color: rgb(71, 71, 255);
 }
 
-.top-row .middle-row .bottom-row {
+.top-row, .middle-row, .bottom-row {
   display: flex;
+}
+
+.top-row {
+  justify-content: space-around;
+}
+
+.middle-row {
+  padding-left: 25px;
 }
 
 .expand-arrow {
   width: 30px;
   height: 30px;
-  background-color: black;
+  background-color: rgb(159, 159, 255);
+  opacity: 50%;
   border-radius: 20px;
+  padding-left: 3px;
+  padding-top: 2px;
+}
+
+.expand-arrow:hover {
+  opacity: 70%;
+  transition: 0.5s;
 }/*# sourceMappingURL=style.css.map */
