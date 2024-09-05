@@ -7,7 +7,9 @@
     font-weight: 400;
     // outline: 2px solid red;
 }
-
+.main {
+    width: 100%;
+}
 .container {
     background-color: #F5F7F9;
     display: flex;
@@ -72,31 +74,50 @@ nav {
     width: 30px;
     height: 30px;
 }
+.content {
+    background-color: variables.$white;
+}
 .card {
-    width: 50%;
+    width: 300px;
     display: flex;
     flex-direction: column;
     background-color: variables.$blue;
+    padding-top: 10px;
+    color: variables.$white;
+    border-radius: 15px;
 }
 .top-row, .middle-row, .bottom-row {
     display: flex;
 }
 .top-row {
     justify-content: space-around;
+    padding-bottom: 20px;
+    font-weight: normal;
 }
 .middle-row {
-    padding-left: 25px;
+    padding-left: 11.5%;
+    padding-bottom: 5px;
+    h1 {
+        font-size: 30px;
+    }
 }
 .expand-arrow {
     width: 30px;
     height: 30px;
     background-color: variables.$lightblue;
-    opacity: 50%;
     border-radius: 20px;
     padding-left: 3px;
     padding-top: 2px;
 }
-.expand-arrow:hover {
-    opacity: 70%;
-    transition: 0.5s;
+.bottom-row {
+    padding-left: 11.5%;
+    padding-bottom: 5px;
+    p {
+        font-weight: lighter;
+        padding-left: 5px;
+    }
+}
+.increase {
+    background-color: variables.$lightblue;
+    border-radius: 20px;
 }
