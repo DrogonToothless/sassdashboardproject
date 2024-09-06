@@ -1,72 +1,72 @@
 // work on the graph goes here...
 @use '../variables';
 
-* {
-    // outline: 2px solid red;
-}
+// * {
+//     // outline: 2px solid red;
+// }
 
-%graphCard {
+// %graphCard {
 
-    .summary-flex {
-        font-family: "articulat-cf", sans-serif;
-        margin-top: 2vmin;
-        display: flex;
-        justify-content: space-around; 
+//     .summary-flex {
+//         font-family: "articulat-cf", sans-serif;
+//         margin-top: 2vmin;
+//         display: flex;
+//         justify-content: space-around; 
 
-        .sales-summary {
-            margin-top: 10px;
-            margin-left: 5px;
-            font-size: 2.5em;
-        }
+//         .sales-summary {
+//             margin-top: 10px;
+//             margin-left: 5px;
+//             font-size: 2.5em;
+//         }
     
-        .range-flex {
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-            gap: 1em;
+//         .range-flex {
+//             margin-top: 10px;
+//             display: flex;
+//             align-items: center;
+//             gap: 1em;
     
-            .time-range {
-                height: 100%;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: 10px;
-                padding: 0 1em;
-                border-radius: 32px;
-                box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-                transition: box-shadow 300ms ease;
-                cursor: pointer;
-            }
+//             .time-range {
+//                 height: 100%;
+//                 width: 100%;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: space-between;
+//                 gap: 10px;
+//                 padding: 0 1em;
+//                 border-radius: 32px;
+//                 box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+//                 transition: box-shadow 300ms ease;
+//                 cursor: pointer;
+//             }
 
-            .time-range:hover {
-                box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px;
-            }
+//             .time-range:hover {
+//                 box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px;
+//             }
     
-            .summary {
-                height: 100%;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                gap: 10px;
-                padding: 0 1em;
-                border-radius: 32px;
-                box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-                transition: box-shadow 300ms ease;
-                cursor: pointer;
-            }
+//             .summary {
+//                 height: 100%;
+//                 width: 100%;
+//                 display: flex;
+//                 align-items: center;
+//                 justify-content: space-between;
+//                 gap: 10px;
+//                 padding: 0 1em;
+//                 border-radius: 32px;
+//                 box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+//                 transition: box-shadow 300ms ease;
+//                 cursor: pointer;
+//             }
 
-            .summary:hover {
-                box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px;
-            }
+//             .summary:hover {
+//                 box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px;
+//             }
 
-            .three-dots {
-                margin-right: 5px;
-                font-size: 1.5em;
-                // border-radius: 50%;
-                // box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-            }
-        }
-    }
-}
+//             .three-dots {
+//                 margin-right: 5px;
+//                 font-size: 1.5em;
+//                 // border-radius: 50%;
+//                 // box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+//             }
+//         }
+//     }
+// }
