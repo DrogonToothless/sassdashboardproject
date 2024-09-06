@@ -1,6 +1,60 @@
 /* -----------------------------------------
 -------------------COLORS-------------------
 ----------------------------------------- */
+.main-bottom .graph .summary-flex {
+  font-family: "articulat-cf", sans-serif;
+  margin-top: 2vmin;
+  display: flex;
+  justify-content: space-around;
+}
+.main-bottom .graph .summary-flex .sales-summary {
+  margin-top: 10px;
+  margin-left: 5px;
+  font-size: 2.5em;
+}
+.main-bottom .graph .summary-flex .range-flex {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.main-bottom .graph .summary-flex .range-flex .time-range {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 1em;
+  border-radius: 32px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+  transition: box-shadow 300ms ease;
+  cursor: pointer;
+}
+.main-bottom .graph .summary-flex .range-flex .time-range:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px;
+}
+.main-bottom .graph .summary-flex .range-flex .summary {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 1em;
+  border-radius: 32px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+  transition: box-shadow 300ms ease;
+  cursor: pointer;
+}
+.main-bottom .graph .summary-flex .range-flex .summary:hover {
+  box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px;
+}
+.main-bottom .graph .summary-flex .range-flex .three-dots {
+  margin-right: 5px;
+  font-size: 1.5em;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -98,6 +152,21 @@
   border-top-left-radius: 16px;
   width: 100%;
   height: 17.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2.5%;
+}
+.main-top .main-title {
+  color: #2a2a2a;
+  font-family: "articulat-cf", sans-serif;
+  font-size: 3em;
+  font-weight: 600;
+}
+.main-top .main-caption {
+  color: #2a2a2a;
+  font-family: "articulat-cf", sans-serif;
+  font-weight: 200;
 }
 
 .main-middle {
