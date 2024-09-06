@@ -114,6 +114,9 @@
   height: 90%;
   width: 30%;
 }
+.main-middle .revenue {
+  background: radial-gradient(circle at 90% 10%, #40a2ca, #345BFC, #5E64EA);
+}
 
 .main-bottom {
   border-bottom-left-radius: 16px;
