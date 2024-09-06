@@ -1,60 +1,6 @@
 /* -----------------------------------------
 -------------------COLORS-------------------
 ----------------------------------------- */
-.main-bottom .graph .summary-flex {
-  font-family: "articulat-cf", sans-serif;
-  margin-top: 2vmin;
-  display: flex;
-  justify-content: space-around;
-}
-.main-bottom .graph .summary-flex .sales-summary {
-  margin-top: 10px;
-  margin-left: 5px;
-  font-size: 2.5em;
-}
-.main-bottom .graph .summary-flex .range-flex {
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
-.main-bottom .graph .summary-flex .range-flex .time-range {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 0 1em;
-  border-radius: 32px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-  transition: box-shadow 300ms ease;
-  cursor: pointer;
-}
-.main-bottom .graph .summary-flex .range-flex .time-range:hover {
-  box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px;
-}
-.main-bottom .graph .summary-flex .range-flex .summary {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 0 1em;
-  border-radius: 32px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-  transition: box-shadow 300ms ease;
-  cursor: pointer;
-}
-.main-bottom .graph .summary-flex .range-flex .summary:hover {
-  box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px;
-}
-.main-bottom .graph .summary-flex .range-flex .three-dots {
-  margin-right: 5px;
-  font-size: 1.5em;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -65,37 +11,36 @@
   background-color: #F5F7F9;
   display: flex;
   width: 100%;
-  height: 100vh;
 }
 
-.full-sidebar, .sidebar {
-  padding: 2.5vmin 5vmin;
+.sidebar {
+  padding: 1em 2.5em;
 }
-.full-sidebar .sidebar-info, .sidebar .sidebar-info {
+.sidebar .sidebar-info {
   margin-top: 20px;
 }
-.full-sidebar .sidebar-name-email, .sidebar .sidebar-name-email {
+.sidebar .sidebar-name-email {
   font-family: "articulat-cf", sans-serif;
   font-weight: 600;
   color: #626373;
 }
-.full-sidebar .sidebar-name-email .sidebar-name, .sidebar .sidebar-name-email .sidebar-name {
+.sidebar .sidebar-name-email .sidebar-name {
   color: #2a2a2a;
 }
-.full-sidebar .sidebar-name-email .sidebar-email, .sidebar .sidebar-name-email .sidebar-email {
+.sidebar .sidebar-name-email .sidebar-email {
   font-weight: 200;
 }
-.full-sidebar .sidebar-separator, .sidebar .sidebar-separator {
+.sidebar .sidebar-separator {
   margin: 2vh 0;
   height: 2px;
   max-width: 200px;
   background-color: #EAEBF0;
 }
-.full-sidebar .sidebar-search, .sidebar .sidebar-search {
+.sidebar .sidebar-search {
   margin: 2vh 0;
   max-width: 200px;
 }
-.full-sidebar .sidebar-search input, .sidebar .sidebar-search input {
+.sidebar .sidebar-search input {
   font-family: "articulat-cf", sans-serif;
   font-weight: 600;
   color: #626373;
@@ -104,7 +49,7 @@
   font-weight: 200;
   padding: 6px;
 }
-.full-sidebar .sidebar-tab, .sidebar .sidebar-tab {
+.sidebar .sidebar-tab {
   align-items: center;
   display: flex;
   gap: 8px;
@@ -114,20 +59,20 @@
   border-radius: 8px;
   cursor: pointer;
 }
-.full-sidebar .sidebar-tab:hover, .sidebar .sidebar-tab:hover {
+.sidebar .sidebar-tab:hover {
   transition: 250ms ease;
   background-color: rgba(0, 0, 0, 0.1);
 }
-.full-sidebar .sidebar-tab:active, .sidebar .sidebar-tab:active {
+.sidebar .sidebar-tab:active {
   color: #4A4B52;
   background-color: #fff;
 }
-.full-sidebar .sidebar-links, .sidebar .sidebar-links {
+.sidebar .sidebar-links {
   font-family: "articulat-cf", sans-serif;
   font-weight: 600;
   color: #626373;
 }
-.full-sidebar .sidebar-dashboard, .sidebar .sidebar-dashboard {
+.sidebar .sidebar-dashboard {
   background-color: #fff;
   color: #4a4b52;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
@@ -137,7 +82,6 @@
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100vh;
 }
 .main-container .main {
   background-color: #fff;
@@ -145,16 +89,13 @@
   border-top-left-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
   width: 100%;
-  height: 95vh;
 }
 
 .main-top {
   border-top-left-radius: 16px;
   width: 100%;
-  height: 17.5%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin-left: 2.5%;
 }
 .main-top .main-title {
@@ -171,20 +112,16 @@
 
 .main-middle {
   width: 100%;
-  height: 32.5%;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 2.5%;
 }
 .main-middle .middle-flex {
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-  height: 90%;
   width: 30%;
 }
 .main-middle .revenue {
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -221,12 +158,7 @@
   font-weight: 600;
   font-size: 3em;
 }
-.main-middle .revenue:hover {
-  transform: translateY(-5px);
-  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
-}
 .main-middle .insight {
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -236,7 +168,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 2vmin;
+  margin-left: 1em;
 }
 .main-middle .insight .insight-overall-arrow .insight-overall {
   color: #2a2a2a;
@@ -246,12 +178,12 @@
 .main-middle .insight .insight-bottom {
   color: #2a2a2a;
   font-family: "articulat-cf", sans-serif;
-  margin-left: 2vmin;
+  margin-left: 1em;
 }
 .main-middle .insight .insight-bottom .gain {
   display: flex;
   align-items: center;
-  gap: 1vmin;
+  gap: 0.5em;
 }
 .main-middle .insight .insight-bottom .gain .insight-percent-gain {
   background-color: #D6FEE3;
@@ -262,30 +194,21 @@
   font-weight: 600;
   font-size: 3em;
 }
-.main-middle .insight:hover {
-  transform: translateY(-5px);
-  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
-}
 
 .main-bottom {
   border-bottom-left-radius: 16px;
   width: 100%;
-  height: 50%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 2.5%;
 }
 .main-bottom .graph {
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-  height: 92.5%;
   width: 62.5%;
 }
 .main-bottom .chart {
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-  height: 92.5%;
   width: 30%;
 }
 
