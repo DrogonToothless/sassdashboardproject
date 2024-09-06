@@ -16,7 +16,7 @@
 }
 
 .sidebar {
-    padding: 1em 2.5em; 
+    padding: 1em 2.5em;
 
     .sidebar-info {
         margin-top: 20px;
@@ -44,6 +44,7 @@
     .sidebar-search {
         margin: 2vh 0;
         max-width: 200px;
+
         input {
             @include variables.sidebar-type;
             border: none;
@@ -94,7 +95,7 @@
     .main {
         background-color: #fff;
         // border-bottom-left-radius: 16px;
-        border-top-left-radius: 16px;
+        // border-top-left-radius: 16px;
         box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
         width: 100%;
         height: 100vh;
@@ -102,12 +103,12 @@
 }
 
 .main-top {
-    border-top-left-radius: 16px;
+    // border-top-left-radius: 16px;
     width: 100%;
     display: flex;
     flex-direction: column;
     // justify-content: center;
-    margin-left: 1.5em;
+    // margin-left: 1.5em;
 
     .main-title {
         color: #2a2a2a;
@@ -116,9 +117,9 @@
         font-weight: 600;
     }
 
-    .main-caption{
+    .main-caption {
         color: #2a2a2a;
-        font-family: "articulat-cf", sans-serif; 
+        font-family: "articulat-cf", sans-serif;
         font-weight: 200;
     }
 }
@@ -127,15 +128,17 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    // justify-content: center;
-    gap: 2.5%;
 
     .middle-flex {
         border-radius: 16px;
         box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-        width: 30%;
-        max-width: 15em;
+        width: clamp(12em, 12em + 12vw, 24em);
+        // width: 20em;
+        // max-width: 25em;
+        gap: 3em;
+        padding: 1em 1em;
     }
 
     .revenue {
@@ -160,19 +163,19 @@
         }
 
         .revenue-bottom {
-            color: #fff; 
+            color: #fff;
             font-family: "articulat-cf", sans-serif;
             // margin-left: 1em;
 
             .gain {
                 display: flex;
                 align-items: center;
-                gap: 1vmin;
+                // gap: 1vmin;
 
                 .revenue-percent-gain {
                     background-color: rgba(255, 255, 255, 0.2);
                     border-radius: 100px;
-                    padding: 2.5px 5px;
+                    // padding: 2.5px 5px;
                 }
             }
 
@@ -199,7 +202,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-left: 1em;
+            // margin-left: 1em;
 
             .insight-overall {
                 color: #2a2a2a;
@@ -209,19 +212,19 @@
         }
 
         .insight-bottom {
-            color: #2a2a2a; 
+            color: #2a2a2a;
             font-family: "articulat-cf", sans-serif;
-            margin-left: 1em;
+            // margin-left: 1em;
 
             .gain {
                 display: flex;
                 align-items: center;
-                gap: 0.5em;
+                // gap: 0.5em;
 
                 .insight-percent-gain {
                     background-color: #D6FEE3;
                     border-radius: 100px;
-                    padding: 2.5px 5px;
+                    // padding: 2.5px 5px;
                 }
             }
 
@@ -231,31 +234,75 @@
             }
         }
     }
+
     // .insight:hover {
     //     transform: translateY(-5px);
     //     box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
     // }
-}
 
-.main-bottom {
-    border-bottom-left-radius: 16px;
-    width: 100%;
-    display: flex;
-    // align-items: center;
-    // justify-content: center;
-    gap: 2.5%;
+    .finance {
+        // cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        transition: transform 300ms ease, box-shadow 250ms ease;
 
-    .graph {
-        border-radius: 16px;
-        box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-        width: 62.5%;
-        // @extend %graphCard;
+        .finance-overall-arrow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // margin-left: 1em;
+
+            .finance-overall {
+                color: #2a2a2a;
+                font-family: "articulat-cf", sans-serif;
+                font-size: 1.5em;
+            }
+        }
+
+        .finance-bottom {
+            color: #2a2a2a;
+            font-family: "articulat-cf", sans-serif;
+            // margin-left: 1em;
+
+            .gain {
+                display: flex;
+                align-items: center;
+                // gap: 0.5em;
+
+                .finance-percent-gain {
+                    background-color: #D6FEE3;
+                    border-radius: 100px;
+                    padding: 2.5px 5px;
+                }
+            }
+
+            .finance-amount {
+                font-weight: 600;
+                font-size: 3em;
+            }
+        }
     }
 
-    .chart {
-        border-radius: 16px;
-        box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-        width: 30%;
+    .main-bottom {
+        border-bottom-left-radius: 16px;
+        width: 100%;
+        display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // gap: 2.5%;
+
+        .graph {
+            border-radius: 16px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+            width: 62.5%;
+            // @extend %graphCard;
+        }
+
+        .chart {
+            border-radius: 16px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+            width: 30%;
+        }
     }
 }
-
