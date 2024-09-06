@@ -127,7 +127,47 @@
     }
 
     .revenue {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         background: radial-gradient(circle at 90% 10%, #40a2ca, #345BFC, #5E64EA);
+
+        .revenue-overall-arrow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 2vmin;
+
+            .revenue-overall {
+                color: #fff;
+                font-family: "articulat-cf", sans-serif;
+                font-size: 1.5em;
+            }
+        }
+
+        .revenue-bottom {
+            color: #fff; 
+            font-family: "articulat-cf", sans-serif;
+            margin-left: 2vmin;
+
+            .gain {
+                display: flex;
+                align-items: center;
+                gap: 1vmin;
+
+                .revenue-percent-gain {
+                    background-color: rgba(255, 255, 255, 0.2);
+                    border-radius: 100px;
+                    padding: 2.5px 5px;
+                }
+            }
+
+            .revenue-amount {
+                font-weight: 600;
+                font-size: 3em;
+            }
+
+        }
     }
 }
 
