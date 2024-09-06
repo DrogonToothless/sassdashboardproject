@@ -100,7 +100,6 @@
         height: 95vh;
         
     }
-
 }
 
 .main-top {
@@ -127,10 +126,12 @@
     }
 
     .revenue {
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         background: radial-gradient(circle at 90% 10%, #40a2ca, #345BFC, #5E64EA);
+        transition: transform 300ms ease, box-shadow 250ms ease;
 
         .revenue-overall-arrow {
             display: flex;
@@ -166,8 +167,59 @@
                 font-weight: 600;
                 font-size: 3em;
             }
-
         }
+    }
+    .revenue:hover {
+        transform: translateY(-5px);
+        box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
+    }
+
+    .insight {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        transition: transform 300ms ease, box-shadow 250ms ease;
+
+        .insight-overall-arrow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 2vmin;
+
+            .insight-overall {
+                color: #2a2a2a;
+                font-family: "articulat-cf", sans-serif;
+                font-size: 1.5em;
+            }
+        }
+
+        .insight-bottom {
+            color: #2a2a2a; 
+            font-family: "articulat-cf", sans-serif;
+            margin-left: 2vmin;
+
+            .gain {
+                display: flex;
+                align-items: center;
+                gap: 1vmin;
+
+                .insight-percent-gain {
+                    background-color: #D6FEE3;
+                    border-radius: 100px;
+                    padding: 2.5px 5px;
+                }
+            }
+
+            .insight-amount {
+                font-weight: 600;
+                font-size: 3em;
+            }
+        }
+    }
+    .insight:hover {
+        transform: translateY(-5px);
+        box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
     }
 }
 
