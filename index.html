@@ -91,7 +91,7 @@
             </div>
             <div class="sidebar-tab">
                 <i class="fa-solid fa-cart-plus"></i>
-                <div>Transaction</div>
+                <div>Transactions</div>
             </div>
             <div class="sidebar-tab">
                 <i class="fa-solid fa-layer-group"></i>
@@ -114,49 +114,84 @@
 
     <div class="main-container">
         <section class="main">
+
             <div class="main-top">
+                
                 <div class="menu-button">
                     <button onclick="menuOpen()">
                         <i class="fa-solid fa-bars"></i>
                     </button>
                 </div>
-                <div style="font-size: 70px;">jsfjibsihbrihgbrig</div>
+                <div class="main-title">Dashboard</div>
+                <div class="main-caption">Your key business metrics at a glance.</div>
             </div>
             <div class="main-middle">
 
-                <div class="revenue middle-flex">
-                    <div class="revenue-overall-arrow">
-                        <div class="revenue-overall">Overall Revenue</div>
-                        <!-- arrow div would go here -->
-                    </div>
-                    <div class="revenue-bottom">
-                        <div class="revenue-amount">$25,912</div>
-                        <div class="gain">
-                            <div class="revenue-percent-gain">+1.9%</div>
-                            <div class="revenue-gain-message">from last month</div>
-                        </div>
+            <div class="revenue middle-flex">
+                <div class="revenue-overall-arrow">
+                    <div class="revenue-overall">Overall Revenue</div>
+                    <!-- <i class="fa-solid fa-up-right-and-down-left-from-center"></i> -->
+                </div>
+                <div class="revenue-bottom">
+                    <div class="revenue-amount">$25,912</div>
+                    <div class="gain">
+                        <div class="revenue-percent-gain">+1.9%</div>
+                        <div class="revenue-gain-message">from last month</div>
                     </div>
                 </div>
-
-                <div class="insight middle-flex">
-                    <div class="insight-overall-arrow">
-                        <div class="insight-overall">Total Site Views</div>
-                        <!-- arrow div would go here  -->
-                    </div>
-                    <div class="insight-bottom">
-                        <div class="insight-amount">129,521</div>
-                        <div class="gain">
-                            <div class="insight-percent-gain">+1.2%</div>
-                            <div class="insight-gain-message">from last month</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="finance middle-flex"></div>
-
             </div>
+
+            <div class="insight middle-flex">
+                <div class="insight-overall-arrow">
+                    <div class="insight-overall">Total Site Views</div>
+                    <!-- <i class="fa-solid fa-up-right-and-down-left-from-center"></i> -->
+                </div>
+                <div class="insight-bottom">
+                    <div class="insight-amount">129,521</div>
+                    <div class="gain">
+                        <div class="insight-percent-gain">+1.2%</div>
+                        <div class="insight-gain-message">from last month</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="finance middle-flex"></div>
+    </div>
+            
             <div class="main-bottom">
-                <div class="graph">this will be the "component"</div>
+                <div class="graph">
+                    <div class="summary-flex">
+
+                        <div class="sales-summary">Sales Summary</div>
+
+                        <div class="range-flex">
+                            <div class="time-range">
+                                <div>This Year</div>
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </div>
+                            <div class="summary">
+                                <div>Summary</div>
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </div>
+                            <div class="three-dots">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="legend">
+                        <div class="sales-legend">
+                            <div></div>
+                            <div>Sales</div>
+                        </div>
+                        <div class="insight-legend">
+                            <div></div>
+                            <div>Insight</div>
+                        </div>
+                    </div>
+
+                </div>
                 <div class="chart"></div>
             </div>
         </section>
