@@ -15,6 +15,7 @@
   background-color: #F5F7F9;
   display: flex;
   width: 100%;
+  gap: 30px;
 }
 
 .sidebar {
@@ -51,20 +52,20 @@
 }
 
 header {
-  width: 100%;
+  width: 30%;
   height: 80px;
   display: flex;
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 100%;
   background-image: url(images/bird-colorful-logo-gradient-vector_343694-1365.avif);
-  background-size: 100px 100px;
+  background-size: 80px 100%;
 }
 
 .searchbar {
-  width: 400px;
+  width: 600px;
   height: 35px;
 }
 .searchbar #searchbar {
@@ -72,6 +73,8 @@ header {
   height: 100%;
   border: 1px solid rgb(174, 174, 174);
   border-radius: 40px;
+  margin-top: 25px;
+  padding-left: 10px;
 }
 
 nav {
@@ -94,6 +97,7 @@ nav ul li {
 .notifications {
   width: 30px;
   height: 30px;
+  margin-top: 25px;
 }
 
 .content {
@@ -149,4 +153,5 @@ nav ul li {
 .increase {
   background-color: rgb(159, 201, 255);
   border-radius: 20px;
+  padding-right: 2px;
 }/*# sourceMappingURL=style.css.map */
