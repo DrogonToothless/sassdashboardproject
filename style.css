@@ -7,34 +7,56 @@
   box-sizing: border-box;
 }
 
-.main {
-  width: 100%;
-}
-
 .container {
   background-color: #F5F7F9;
   display: flex;
   width: 100%;
+  height: 100vh;
 }
 
 .sidebar {
-  height: 100vh;
   padding: 2.5vmin 5vmin;
 }
+.sidebar .sidebar-info {
+  margin-top: 20px;
+}
+.sidebar .sidebar-name-email {
+  font-family: "articulat-cf", sans-serif;
+  font-weight: 600;
+  color: #626373;
+}
+.sidebar .sidebar-name-email .sidebar-name {
+  color: #2a2a2a;
+}
+.sidebar .sidebar-name-email .sidebar-email {
+  font-weight: 200;
+}
+.sidebar .sidebar-separator {
+  margin: 2vh 0;
+  height: 2px;
+  max-width: 200px;
+  background-color: #EAEBF0;
+}
 .sidebar .sidebar-search {
-  margin-bottom: 2vh;
+  margin: 2vh 0;
+  max-width: 200px;
 }
 .sidebar .sidebar-search input {
+  font-family: "articulat-cf", sans-serif;
+  font-weight: 600;
+  color: #626373;
   border: none;
   border-radius: 4px;
-  padding: 5px;
+  font-weight: 200;
+  padding: 6px;
 }
 .sidebar .sidebar-tab {
   align-items: center;
   display: flex;
-  justify-content: space-between;
-  padding: 5px;
-  margin: 1px 0;
+  gap: 8px;
+  padding: 6px;
+  margin: 3px 0;
+  max-width: 200px;
   border-radius: 8px;
   cursor: pointer;
 }
@@ -42,7 +64,7 @@
   transition: 250ms ease;
   background-color: rgba(0, 0, 0, 0.1);
 }
-.sidebar .sidebar-tab:active, .sidebar .sidebar-tab:focus {
+.sidebar .sidebar-tab:active {
   color: #4A4B52;
   background-color: #fff;
 }
@@ -51,104 +73,66 @@
   font-weight: 600;
   color: #626373;
 }
+.sidebar .sidebar-dashboard {
+  background-color: #fff;
+  color: #4a4b52;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+}
 
-header {
+.main-container {
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 80px;
-  display: flex;
+  height: 100vh;
 }
-
-.logo {
-  width: 100px;
-  height: 100px;
-  background-image: url(images/bird-colorful-logo-gradient-vector_343694-1365.avif);
-  background-size: 100px 100px;
-}
-
-.searchbar {
-  width: 400px;
-  height: 35px;
-}
-.searchbar #searchbar {
+.main-container .main {
+  background-color: #fff;
+  border-bottom-left-radius: 16px;
+  border-top-left-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
   width: 100%;
-  height: 100%;
-  border: 1px solid rgb(174, 174, 174);
-  border-radius: 40px;
+  height: 95vh;
 }
 
-nav {
-  height: 25px;
-}
-nav ul {
-  padding: 0px;
-}
-nav ul li {
-  list-style-type: none;
-  display: inline;
-  font-family: Arial;
-  font-size: 20px;
+.main-top {
+  border-top-left-radius: 16px;
+  width: 100%;
+  height: 17.5%;
 }
 
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-}
-
-.notifications {
-  width: 30px;
-  height: 30px;
-}
-
-.content {
-  background-color: rgb(255, 255, 255);
-}
-
-.card {
-  width: 300px;
+.main-middle {
+  width: 100%;
+  height: 32.5%;
   display: flex;
-  flex-direction: column;
-  background-color: rgb(39, 111, 211);
-  padding-top: 10px;
-  color: rgb(255, 255, 255);
-  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5%;
+}
+.main-middle div {
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+  height: 90%;
+  width: 30%;
 }
 
-.top-row, .middle-row, .bottom-row {
+.main-bottom {
+  border-bottom-left-radius: 16px;
+  width: 100%;
+  height: 50%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5%;
 }
-
-.top-row {
-  justify-content: space-around;
-  padding-bottom: 20px;
-  font-weight: normal;
+.main-bottom .graph {
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+  height: 92.5%;
+  width: 62.5%;
 }
-
-.middle-row {
-  padding-left: 11.5%;
-  padding-bottom: 5px;
-}
-.middle-row h1 {
-  font-size: 30px;
-}
-
-.expand-arrow {
-  width: 30px;
-  height: 30px;
-  background-color: rgb(159, 201, 255);
-  border-radius: 20px;
-  padding-left: 3px;
-  padding-top: 2px;
-}
-
-.bottom-row {
-  padding-left: 11.5%;
-  padding-bottom: 5px;
-}
-.bottom-row p {
-  font-weight: lighter;
-  padding-left: 5px;
-}
-
-.increase {
-  background-color: rgb(159, 201, 255);
-  border-radius: 20px;
+.main-bottom .chart {
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+  height: 92.5%;
+  width: 30%;
 }/*# sourceMappingURL=style.css.map */

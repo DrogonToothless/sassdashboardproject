@@ -13,27 +13,25 @@
 
 <body>
     <div class="container">
-
+    
     <!------------------------------------------------>
     <!--------------------SIDEBAR--------------------->
     <!------------------------------------------------>
     <aside class="sidebar">
         <div class="sidebar-info">
-            <div class="sidebar-logo"></div>
             <div class="sidebar-name-email">
-                <div class="name">John Doe</div>
-                <div class="email">johndoe@example.com</div>
+                <div class="sidebar-name">John Doe</div>
+                <div class="sidebar-email">johndoe@example.com</div>
             </div>
-            <div class="sidebar-nav-arrows">^</div>
         </div>
-        <div class="sidebar-separator"></div>
+        <div class="sidebar-separator separator"></div>
         <div class="sidebar-search">
             <input type="text" name="sidebar-search" placeholder="Search">
         </div>
         <div class="sidebar-links">
-            <div class="sidebar-tab">
+            <div class="sidebar-tab sidebar-dashboard">
                 <i class="fa-solid fa-house"></i>
-                <div class="sidebar-dashboard">Dashboard</div>
+                <div>Dashboard</div>
             </div>
             <div class="sidebar-tab">
                 <i class="fa-solid fa-user"></i>
@@ -66,39 +64,23 @@
         </div>
     </aside>
 
-    <section class="main">
-        <header class="container">
-            <div class="logo"></div>
-            <div class="searchbar">
-                <input type="text" name="search" placeholder=" Search" id="searchbar">
+    <div class="main-container">
+        <section class="main">
+            <div class="main-top">
+                <div></div>
             </div>
-            <div class="notifications">
-                <span class="material-symbols-outlined">notifications</span>
+            <div class="main-middle">
+                <div class="revenue"></div>
+                <div class="insight"></div>
+                <div class="finance"></div>
             </div>
-        </header>
-        <section class="content">
-            <h1>Sales Overview</h1>
-            <div class="card">
-                <div class="top-row">
-                    <p>Overall Revenue</p>
-                    <div class="expand-arrow">
-                        <span class="material-symbols-outlined">open_in_full</span>
-                    </div>
-                </div>
-                <div class="middle-row">
-                    <h1>$25,912</h1>
-                </div>
-                <div class="bottom-row">
-                    <div class="increase">
-                        <p>+1.9%</p>
-                    </div>
-                    <p>Than Last Month</p>
-                </div>
+            <div class="main-bottom">
+                <div class="graph"></div>
+                <div class="chart"></div>
             </div>
         </section>
-    </section>
+    </div>
 
     </div>
-    
 </body>
 </html>
