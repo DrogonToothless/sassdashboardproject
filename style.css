@@ -299,6 +299,8 @@
   width: 50px;
   height: 50px;
   margin-top: 20px;
+  margin-bottom: 20px;
+  justify-self: baseline;
 }
 .menu-button button {
   width: 100%;
@@ -327,5 +329,26 @@
 @media screen and (max-width: 1130px) {
   .full-sidebar {
     display: none;
+  }
+}
+@media screen and (max-width: 880px) {
+  .main-middle {
+    flex-direction: column;
+  }
+  .main-middle .middle-flex {
+    width: 50%;
+    padding-top: 20px;
+  }
+  .main-middle .middle-flex .revenue-overall-arrow {
+    padding-bottom: 10px;
+  }
+  .main-middle .middle-flex .revenue-bottom {
+    padding-bottom: 10px;
+  }
+  .main-middle .middle-flex .insight-overall-arrow {
+    padding-bottom: 10px;
+  }
+  .main-middle .middle-flex .insight-bottom {
+    padding-bottom: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
