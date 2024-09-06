@@ -108,7 +108,7 @@
   justify-content: center;
   gap: 2.5%;
 }
-.main-middle div {
+.main-middle .middle-flex {
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
   height: 90%;
