@@ -5,68 +5,112 @@
 //     // outline: 2px solid red;
 // }
 
-// %graphCard {
+%graphCard {
 
-//     .summary-flex {
-//         font-family: "articulat-cf", sans-serif;
-//         margin-top: 2vmin;
-//         display: flex;
-//         justify-content: space-around; 
+    .summary-flex {
+        width: clamp(24em, 24em + 26.25vw, 52em);
+        font-family: "articulat-cf", sans-serif;
+        margin-top: 1.5em;
+        padding: 0 1.5em;
+        display: flex;
+        justify-content: space-between; 
 
-//         .sales-summary {
-//             margin-top: 10px;
-//             margin-left: 5px;
-//             font-size: 2.5em;
-//         }
+        .sales-summary {
+            // margin-left: 0.5em;
+            font-size: 2.5em;
+        }
     
-//         .range-flex {
-//             margin-top: 10px;
-//             display: flex;
-//             align-items: center;
-//             gap: 1em;
+        .range-flex {
+            // margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
     
-//             .time-range {
-//                 height: 100%;
-//                 width: 100%;
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: space-between;
-//                 gap: 10px;
-//                 padding: 0 1em;
-//                 border-radius: 32px;
-//                 box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-//                 transition: box-shadow 300ms ease;
-//                 cursor: pointer;
-//             }
+            .time-range {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0.8em;
+                padding: 0 1em;
+                border-radius: 32px;
+                box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+                transition: box-shadow 350ms ease;
+                cursor: pointer;
+            }
 
-//             .time-range:hover {
-//                 box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px;
-//             }
+            .time-range:hover {
+                box-shadow: rgba(0, 0, 0, 0.4) 0 0 3px;
+            }
     
-//             .summary {
-//                 height: 100%;
-//                 width: 100%;
-//                 display: flex;
-//                 align-items: center;
-//                 justify-content: space-between;
-//                 gap: 10px;
-//                 padding: 0 1em;
-//                 border-radius: 32px;
-//                 box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-//                 transition: box-shadow 300ms ease;
-//                 cursor: pointer;
-//             }
+            .summary {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0.8em;
+                padding: 0 1em;
+                border-radius: 32px;
+                box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+                transition: box-shadow 350ms ease;
+                cursor: pointer;
+            }
 
-//             .summary:hover {
-//                 box-shadow: rgba(0, 0, 0, 0.5) 0 0 3px;
-//             }
+            .summary:hover {
+                box-shadow: rgba(0, 0, 0, 0.4) 0 0 3px;
+            }
 
-//             .three-dots {
-//                 margin-right: 5px;
-//                 font-size: 1.5em;
-//                 // border-radius: 50%;
-//                 // box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-//             }
-//         }
-//     }
-// }
+            // .three-dots {
+            //     // margin-right: 5px;
+            //     // font-size: 1.5em;
+            //     // // border-radius: 50%;
+            //     // // box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+            //     // cursor: pointer;
+            // }
+        }
+    }
+    .legend {
+        display: flex;
+        gap: 2.7em;
+        font-family: "articulat-cf", sans-serif;
+        margin: 1em 0 1em 1.6em;
+
+        .sales-legend {
+            display: flex;
+            gap: 0.5em;
+
+            .sales-icon {
+                border-radius: 50%;
+                background: radial-gradient(circle at 90% 10%, #40a2ca, #345BFC, #5E64EA);
+                width: 1em;
+                height: 1em;
+            }
+        }
+
+        .insight-legend {
+            display: flex;
+            gap: 0.5em;
+
+            .insight-icon {
+                border-radius: 50%;
+                background-color: #cfddff;
+                width: 1em;
+                height: 1em;
+            }
+        }
+    }
+    .faux-chart {
+        // margin-left: 1.6em;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1em;
+        width: 100%;
+
+        img {
+            width: 95%;
+            height: 15em; // USE CLAMP (MAYBE)
+        }
+    }
+}

@@ -8,11 +8,14 @@
     // outline: 2px solid red;
 }
 
+body {
+    background-color: #f5f7f9;
+}
+
 .container {
-    background-color: #F5F7F9;
+    // background-color: #F5F7F9;
     display: flex;
     width: 100%;
-    height: 100vh;
 }
 
 .sidebar {
@@ -60,7 +63,7 @@
         display: flex;
         gap: 8px;
         padding: 6px;
-        margin: 3px 0;
+        margin: 6px 0;
         max-width: 200px;
         border-radius: 8px;
         cursor: pointer;
@@ -93,34 +96,41 @@
     width: 100%;
 
     .main {
+        // margin-top: 1em;
+        margin-top: 2.5vh;
         background-color: #fff;
-        // border-bottom-left-radius: 16px;
-        // border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+        border-top-left-radius: 16px;
         box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
         width: 100%;
-        height: 100vh;
+        height: 95vh;
+        // dont specify a height, and the window will auto
+        // resize as the elements wrap
+        // comment the height and uncomment the margin for media qry
     }
 }
 
 .main-top {
-    // border-top-left-radius: 16px;
-    width: 100%;
+    // width: 100%;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
-    // margin-left: 1.5em;
+    margin: 1.6em 0 1em 2.2em;
+    // margin: 1em 0;
+    // comments right above and below r what im gonna put in the media qry
 
     .main-title {
         color: #2a2a2a;
         font-family: "articulat-cf", sans-serif;
         font-size: 3em;
         font-weight: 600;
+        // text-align: center;
     }
 
     .main-caption {
         color: #2a2a2a;
         font-family: "articulat-cf", sans-serif;
         font-weight: 200;
+        // text-align: center;
     }
 }
 
@@ -128,21 +138,21 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 1.5em; // USE CLAMP
     flex-wrap: wrap;
 
     .middle-flex {
         border-radius: 16px;
         box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-        width: clamp(12em, 12em + 12vw, 24em);
-        // width: 20em;
-        // max-width: 25em;
-        gap: 3em;
-        padding: 1em 1em;
+        width: clamp(12em, 12em + 16vw, 40em); // USE CLAMP
+        // margin: 1em 0;
+        gap: clamp(3em, 3em + 3vw, 6em); // USE CLAMP
+        padding: 1.5em;
     }
 
     .revenue {
-        // cursor: pointer;
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -153,46 +163,44 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            // margin-left: 1em;
 
             .revenue-overall {
                 color: #fff;
                 font-family: "articulat-cf", sans-serif;
-                font-size: 1.5em;
+                font-size: clamp(1.5em, 1.5em + 0.5vw, 3em); // USE CLAMP --> ALSO ON TOTAL SITE VIEWS, ETC.
             }
         }
 
         .revenue-bottom {
             color: #fff;
             font-family: "articulat-cf", sans-serif;
-            // margin-left: 1em;
 
             .gain {
                 display: flex;
                 align-items: center;
-                // gap: 1vmin;
+                gap: 0.5em;
 
                 .revenue-percent-gain {
                     background-color: rgba(255, 255, 255, 0.2);
                     border-radius: 100px;
-                    // padding: 2.5px 5px;
+                    padding: 2.5px 5px;
                 }
             }
 
             .revenue-amount {
                 font-weight: 600;
-                font-size: 3em;
+                font-size: clamp(3em, 3em + 1vw, 4.5em);
             }
         }
     }
 
-    // .revenue:hover {
-    //     transform: translateY(-5px);
-    //     box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
-    // }
+    .revenue:hover {
+        transform: translateY(-5px);
+        box-shadow: rgba(0, 0, 0, 0.4) 0 5px 10px;
+    }
 
     .insight {
-        // cursor: pointer;
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -202,43 +210,41 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            // margin-left: 1em;
 
             .insight-overall {
                 color: #2a2a2a;
                 font-family: "articulat-cf", sans-serif;
-                font-size: 1.5em;
+                font-size: clamp(1.5em, 1.5em + 0.5vw, 3em);
             }
         }
 
         .insight-bottom {
             color: #2a2a2a;
             font-family: "articulat-cf", sans-serif;
-            // margin-left: 1em;
 
             .gain {
                 display: flex;
                 align-items: center;
-                // gap: 0.5em;
+                gap: 0.5em;
 
                 .insight-percent-gain {
                     background-color: #D6FEE3;
                     border-radius: 100px;
-                    // padding: 2.5px 5px;
+                    padding: 2.5px 5px;
                 }
             }
 
             .insight-amount {
                 font-weight: 600;
-                font-size: 3em;
+                font-size: clamp(3em, 3em + 1vw, 4.5em);
             }
         }
     }
 
-    // .insight:hover {
-    //     transform: translateY(-5px);
-    //     box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
-    // }
+    .insight:hover {
+        transform: translateY(-5px);
+        box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
+    }
 
     .finance {
         // cursor: pointer;
@@ -256,7 +262,7 @@
             .finance-overall {
                 color: #2a2a2a;
                 font-family: "articulat-cf", sans-serif;
-                font-size: 1.5em;
+                font-size: clamp(1.5em, 1.5em + 0.5vw, 3em);
             }
         }
 
@@ -279,30 +285,35 @@
 
             .finance-amount {
                 font-weight: 600;
-                font-size: 3em;
+                font-size: clamp(3em, 3em + 1vw, 4.5em);
             }
         }
     }
 
+    .finance:hover {
+        transform: translateY(-5px);
+        box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
+    }
+
     .main-bottom {
-        border-bottom-left-radius: 16px;
+        // margin-top: 1em;
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
         // align-items: center;
-        // justify-content: center;
-        // gap: 2.5%;
+        justify-content: center;
+        gap: 2em;
 
         .graph {
             border-radius: 16px;
             box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-            width: 62.5%;
-            // @extend %graphCard;
+            @extend %graphCard;
         }
 
         .chart {
             border-radius: 16px;
             box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-            width: 30%;
+            width: clamp(12em, 12em + 12vw, 24em);
         }
     }
 }
