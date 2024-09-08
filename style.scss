@@ -138,6 +138,7 @@ body {
     flex-wrap: wrap;
 
     .middle-flex {
+        min-width: 20em;
         border-radius: 16px;
         box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
         width: clamp(20em, 3em + 23vw, 40em); // USE CLAMP
@@ -345,6 +346,7 @@ body {
         }
 
         .chart-flex {
+            min-width: 20em;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -375,10 +377,10 @@ body {
     }
 
     .main {
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+        margin-top: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-left-radius: 0 !important;
     }
-
 }
 
 @media (max-width: 600px) {
