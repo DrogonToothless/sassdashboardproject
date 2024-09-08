@@ -82,8 +82,8 @@
   width: 100%;
 }
 .main-middle .main-bottom .graph .faux-chart img {
-  width: 95%;
-  height: 15em;
+  width: clamp(24em, 22em + 26.25vw, 52em);
+  height: clamp(10em, 8em + 10vh, 22em);
 }
 
 * {
@@ -178,24 +178,25 @@ body {
   border-top-left-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
   width: 100%;
-  height: 95vh;
 }
 
 .main-top {
   display: flex;
   flex-direction: column;
-  margin: 1.6em 0 1em 2.2em;
+  margin: 1.6em 0 1em 0;
 }
 .main-top .main-title {
   color: #2a2a2a;
   font-family: "articulat-cf", sans-serif;
   font-size: 3em;
   font-weight: 600;
+  text-align: center;
 }
 .main-top .main-caption {
   color: #2a2a2a;
   font-family: "articulat-cf", sans-serif;
   font-weight: 200;
+  text-align: center;
 }
 
 .main-middle {
@@ -203,17 +204,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5em;
+  gap: clamp(1em, 1.5vw, 3em);
   flex-wrap: wrap;
 }
 .main-middle .middle-flex {
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-  width: clamp(12em, 12em + 16vw, 40em);
-  gap: clamp(3em, 3em + 3vw, 6em);
+  width: clamp(20em, 3em + 23vw, 40em);
+  gap: clamp(3em, 5vw, 6em);
   padding: 1.5em;
 }
 .main-middle .revenue {
+  min-height: 15vw;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -254,6 +256,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.4) 0 5px 10px;
 }
 .main-middle .insight {
+  min-height: 15vw;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -293,9 +296,11 @@ body {
   box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
 }
 .main-middle .finance {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  min-height: 15vw;
+  gap: clamp(0.5em, 1.4vw, 6em);
   transition: transform 300ms ease, box-shadow 250ms ease;
 }
 .main-middle .finance .finance-overall-arrow {
@@ -309,21 +314,45 @@ body {
   font-size: clamp(1.5em, 1.5em + 0.5vw, 3em);
 }
 .main-middle .finance .finance-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
   color: #2a2a2a;
   font-family: "articulat-cf", sans-serif;
 }
-.main-middle .finance .finance-bottom .gain {
-  display: flex;
-  align-items: center;
-}
-.main-middle .finance .finance-bottom .gain .finance-percent-gain {
-  background-color: #D6FEE3;
-  border-radius: 100px;
-  padding: 2.5px 5px;
-}
 .main-middle .finance .finance-bottom .finance-amount {
+  font-family: "articulat-cf", sans-serif;
   font-weight: 600;
-  font-size: clamp(3em, 3em + 1vw, 4.5em);
+  font-size: clamp(3em, 2em + 1vw, 4.5em);
+}
+.main-middle .finance .finance-bottom .finance-bar {
+  display: flex;
+  width: 100%;
+  height: 3em;
+}
+.main-middle .finance .finance-bottom .finance-bar .filled {
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  width: 50%;
+  height: 50px;
+  background: radial-gradient(circle at 90% 10%, #40a2ca, #345BFC, #5E64EA);
+}
+.main-middle .finance .finance-bottom .finance-bar .unfilled {
+  width: 50%;
+  height: 50px;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+}
+.main-middle .finance .finance-bottom .finance-legend {
+  display: flex;
+  gap: 0.5em;
+}
+.main-middle .finance .finance-bottom .finance-legend .finance-legend-icon {
+  border-radius: 50%;
+  background: radial-gradient(circle at 90% 10%, #40a2ca, #345BFC, #5E64EA);
+  width: 1em;
+  height: 1em;
 }
 .main-middle .finance:hover {
   transform: translateY(-5px);
@@ -335,13 +364,28 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2em;
+  margin-bottom: 2em;
 }
 .main-middle .main-bottom .graph {
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
 }
-.main-middle .main-bottom .chart {
+.main-middle .main-bottom .chart-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 16px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-  width: clamp(12em, 12em + 12vw, 24em);
+  width: clamp(12em, 12em + 16vw, 40em);
+}
+.main-middle .main-bottom .chart {
+  text-align: center;
+  font-size: 3em;
+  font-family: "articulat-cf", sans-serif;
+}
+
+@media (max-width: 1920px) {
+  .main {
+    border-bottom-left-radius: 0px;
+  }
 }/*# sourceMappingURL=style.css.map */

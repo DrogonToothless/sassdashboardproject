@@ -103,14 +103,16 @@
     }
     .faux-chart {
         // margin-left: 1.6em;
+        // outline: 2px solid red;
         display: flex;
         justify-content: center;
         margin-bottom: 1em;
         width: 100%;
 
         img {
-            width: 95%;
-            height: 15em; // USE CLAMP (MAYBE)
+            // outline: 2px solid red;
+            width: clamp(24em, 22em + 26.25vw, 52em);
+            height: clamp(10em, 8em + 10vh, 22em); // USE CLAMP (MAYBE)
         }
     }
 }

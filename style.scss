@@ -103,7 +103,7 @@ body {
         border-top-left-radius: 16px;
         box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
         width: 100%;
-        height: 95vh;
+        // height: 95vh;
         // dont specify a height, and the window will auto
         // resize as the elements wrap
         // comment the height and uncomment the margin for media qry
@@ -114,7 +114,8 @@ body {
     // width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 1.6em 0 1em 2.2em;
+    margin: 1.6em 0 1em 0;
+    // margin-left: clamp(2.2em, 3.7vw, 5em);
     // margin: 1em 0;
     // comments right above and below r what im gonna put in the media qry
 
@@ -123,14 +124,14 @@ body {
         font-family: "articulat-cf", sans-serif;
         font-size: 3em;
         font-weight: 600;
-        // text-align: center;
+        text-align: center;
     }
 
     .main-caption {
         color: #2a2a2a;
         font-family: "articulat-cf", sans-serif;
         font-weight: 200;
-        // text-align: center;
+        text-align: center;
     }
 }
 
@@ -139,19 +140,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5em; // USE CLAMP
+    gap: clamp(1em, 1.5vw, 3em); // USE CLAMP
     flex-wrap: wrap;
 
     .middle-flex {
         border-radius: 16px;
         box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-        width: clamp(12em, 12em + 16vw, 40em); // USE CLAMP
+        width: clamp(20em, 3em + 23vw, 40em); // USE CLAMP
         // margin: 1em 0;
-        gap: clamp(3em, 3em + 3vw, 6em); // USE CLAMP
+        gap: clamp(3em, 5vw, 6em); // USE CLAMP
         padding: 1.5em;
     }
 
     .revenue {
+        min-height: 15vw;
         cursor: pointer;
         display: flex;
         flex-direction: column;
@@ -200,6 +202,7 @@ body {
     }
 
     .insight {
+        min-height: 15vw;
         cursor: pointer;
         display: flex;
         flex-direction: column;
@@ -247,10 +250,12 @@ body {
     }
 
     .finance {
-        // cursor: pointer;
+        cursor: pointer;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        min-height: 15vw;
+        gap: clamp(0.5em, 1.4vw, 6em); // USE CLAMP
+        // justify-content: space-evenly;
         transition: transform 300ms ease, box-shadow 250ms ease;
 
         .finance-overall-arrow {
@@ -267,25 +272,53 @@ body {
         }
 
         .finance-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7em;
+            // gap: clamp(0.1em, 0.1em + 0.2w, 1em);
             color: #2a2a2a;
             font-family: "articulat-cf", sans-serif;
             // margin-left: 1em;
 
-            .gain {
-                display: flex;
-                align-items: center;
-                // gap: 0.5em;
-
-                .finance-percent-gain {
-                    background-color: #D6FEE3;
-                    border-radius: 100px;
-                    padding: 2.5px 5px;
-                }
+            .finance-amount {
+                font-family: "articulat-cf", sans-serif;
+                font-weight: 600;
+                font-size: clamp(3em, 2em + 1vw, 4.5em);
             }
 
-            .finance-amount {
-                font-weight: 600;
-                font-size: clamp(3em, 3em + 1vw, 4.5em);
+            .finance-bar {
+                display: flex;
+                width: 100%;
+                height: 3em;
+
+                .filled {
+                    border-top-left-radius: 1em;
+                    border-bottom-left-radius: 1em;
+                    width: 50%;
+                    height: 50px;
+                    background: radial-gradient(circle at 90% 10%, #40a2ca, #345BFC, #5E64EA);
+                }
+                
+                .unfilled {
+                    width: 50%;
+                    height: 50px;
+                    border-top-right-radius: 1em;
+                    border-bottom-right-radius: 1em;
+                    box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+                    // CHANGE THE ABOVE BOX SHADOW TO SOMETHING ELSE
+                }
+            }
+            
+            .finance-legend {
+                display: flex;
+                gap: 0.5em;
+
+                .finance-legend-icon {
+                    border-radius: 50%;
+                    background: radial-gradient(circle at 90% 10%, #40a2ca, #345BFC, #5E64EA);
+                    width: 1em;
+                    height: 1em;
+                }
             }
         }
     }
@@ -303,6 +336,7 @@ body {
         // align-items: center;
         justify-content: center;
         gap: 2em;
+        margin-bottom: 2em;
 
         .graph {
             border-radius: 16px;
@@ -310,10 +344,25 @@ body {
             @extend %graphCard;
         }
 
-        .chart {
+        .chart-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border-radius: 16px;
             box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-            width: clamp(12em, 12em + 12vw, 24em);
+            width: clamp(12em, 12em + 16vw, 40em);
         }
+
+        .chart {
+            text-align: center;
+            font-size: 3em;
+            font-family: "articulat-cf", sans-serif;
+        }
+    }
+}
+
+@media (max-width: 1920px) {
+    .main {
+        border-bottom-left-radius: 0px;
     }
 }
