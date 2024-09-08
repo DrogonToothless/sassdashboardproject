@@ -92,11 +92,11 @@ body {
 
 .main-container {
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
 
     .main {
-        // margin-top: 1em;
         margin-top: 2.5vh;
         background-color: #fff;
         border-bottom-left-radius: 16px;
@@ -104,19 +104,13 @@ body {
         box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
         width: 100%;
         // height: 95vh;
-        // dont specify a height, and the window will auto
-        // resize as the elements wrap
-        // comment the height and uncomment the margin for media qry
     }
 }
 
 .main-top {
-    // width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 1.6em 0 1em 0;
-    // margin-left: clamp(2.2em, 3.7vw, 5em);
-    // margin: 1em 0;
+    margin: 1.6em 0;
     // comments right above and below r what im gonna put in the media qry
 
     .main-title {
@@ -342,6 +336,12 @@ body {
             border-radius: 16px;
             box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
             @extend %graphCard;
+            transition: transform 300ms ease, box-shadow 250ms ease;
+        }
+
+        .graph:hover {
+            transform: translateY(-5px);
+            box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
         }
 
         .chart-flex {
@@ -351,9 +351,16 @@ body {
             border-radius: 16px;
             box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
             width: clamp(12em, 12em + 16vw, 40em);
+            transition: transform 300ms ease, box-shadow 250ms ease;
+        }
+
+        .chart-flex:hover {
+            transform: translateY(-5px);
+            box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
         }
 
         .chart {
+            padding: 1.5em;
             text-align: center;
             font-size: 3em;
             font-family: "articulat-cf", sans-serif;
@@ -361,8 +368,21 @@ body {
     }
 }
 
-@media (max-width: 1920px) {
+@media (max-width: 900px) {
+
+    .sidebar {
+        display: none;
+    }
+
     .main {
-        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .graph {
+        display: none;
     }
 }
