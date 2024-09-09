@@ -18,8 +18,13 @@ body {
     display: flex;
     width: 100%;
 }
-
-.sidebar {
+.menu-hide {
+    display: none;
+}
+.menu-display {
+    display: block;
+}
+.sidebar , .sidebar-full{
     padding: 1em 2.5em;
     
     .sidebar-info {
@@ -116,6 +121,8 @@ body {
     .menu-container {
         width: 40px;
         aspect-ratio: 1/1;
+        margin: 0 auto;
+        margin-bottom: 15px;
         .menu-button {
             width: 100%;
             height: 100%;
@@ -382,10 +389,14 @@ body {
         }
     }
 }
-
+@media screen and (min-width: 900px) {
+    .menu-container {
+        display: none;
+    }
+}
 @media (max-width: 900px) {
 
-    .sidebar {
+    .sidebar-full {
         display: none;
     }
 

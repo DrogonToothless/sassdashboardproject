@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,14 +11,9 @@
     <script src="https://kit.fontawesome.com/0ad91c2e21.js" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
 </head>
-
 <body>
     <div class="container">
-
-        <!------------------------------------------------>
-        <!--------------------SIDEBAR--------------------->
-        <!------------------------------------------------>
-        <aside class="sidebar">
+        <aside class="sidebar-full">
             <div class="sidebar-info">
                 <div class="sidebar-name-email">
                     <div class="sidebar-name">John Doe</div>
@@ -66,7 +59,52 @@
                 </div>
             </div>
         </aside>
-
+        <aside class="menu-hide sidebar sidebar-responsive" id="menu">
+            <div class="sidebar-info">
+                <div class="sidebar-name-email">
+                    <div class="sidebar-name">John Doe</div>
+                    <div class="sidebar-email">johndoe@example.com</div>
+                </div>
+            </div>
+            <div class="sidebar-separator separator"></div>
+            <div class="sidebar-search">
+                <input type="text" name="sidebar-search" placeholder="Search">
+            </div>
+            <div class="sidebar-links">
+                <div class="sidebar-tab sidebar-dashboard">
+                    <i class="fa-solid fa-house"></i>
+                    <div>Dashboard</div>
+                </div>
+                <div class="sidebar-tab">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="sidebar-accounts">Accounts</div>
+                </div>
+                <div class="sidebar-tab">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <div class="sidebar-cards">Cards</div>
+                </div>
+                <div class="sidebar-tab">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <div>Transactions</div>
+                </div>
+                <div class="sidebar-tab">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <div>Spend Groups</div>
+                </div>
+                <div class="sidebar-tab">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <div>Integrations</div>
+                </div>
+                <div class="sidebar-tab">
+                    <i class="fa-solid fa-user-group"></i>
+                    <div>Payees</div>
+                </div>
+                <div class="sidebar-tab">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    <div>Invoices</div>
+                </div>
+            </div>
+        </aside>
         <div class="main-container">
             <section class="main">
                 <div class="main-top">
