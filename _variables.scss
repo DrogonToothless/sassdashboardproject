@@ -8,7 +8,7 @@ $blue: rgb(39, 111, 211);
 $lightblue: rgb(159, 201, 255);
 $white: rgb(255, 255, 255);
 $sidebarGray: #838490;
-
+$shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
 
 @mixin sidebar-type {
     font-family: "articulat-cf", sans-serif;

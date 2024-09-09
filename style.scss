@@ -82,7 +82,7 @@
     .sidebar-dashboard {
         background-color: #fff;
         color: #4a4b52;
-        box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px; // turn this into a variable
+        box-shadow: variables.$shadow; 
     }
 }
 
@@ -95,7 +95,7 @@
         background-color: #fff;
         border-bottom-left-radius: 16px;
         border-top-left-radius: 16px;
-        box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+        box-shadow: variables.$shadow;
         width: 100%;
     }
 }
@@ -105,14 +105,21 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
+    justify-content: center;
     margin-left: 2.5%;
-
+    .menu-button {
+        display: inline;
+        width: 50px;
+        height: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
     .main-title {
         color: #2a2a2a;
         font-family: "articulat-cf", sans-serif;
         font-size: 3em;
         font-weight: 600;
+        padding-top: 10px;
     }
 
     .main-caption{
@@ -126,12 +133,12 @@
     width: 100%;
     display: flex;
     align-items: center;
-    // justify-content: center;
+    justify-content: center;
     gap: 2.5%;
 
     .middle-flex {
         border-radius: 16px;
-        box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+        box-shadow: variables.$shadow;
         width: 30%;
     }
 
@@ -180,13 +187,13 @@
         }
     }
 
-    // .revenue:hover {
-    //     transform: translateY(-5px);
-    //     box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
-    // }
+    .revenue:hover {
+        transform: translateY(-5px);
+        box-shadow: variables.$shadow;
+    }
 
     .insight {
-        // cursor: pointer;
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -228,10 +235,10 @@
             }
         }
     }
-    // .insight:hover {
-    //     transform: translateY(-5px);
-    //     box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
-    // }
+    .insight:hover {
+        transform: translateY(-5px);
+        box-shadow: variables.$shadow;
+    }
 }
 
 .main-bottom {
@@ -244,14 +251,14 @@
 
     .graph {
         border-radius: 16px;
-        box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+        box-shadow: variables.$shadow;
         width: 62.5%;
         // @extend %graphCard;
     }
 
     .chart {
         border-radius: 16px;
-        box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+        box-shadow: variables.$shadow;
         width: 30%;
     }
 }
