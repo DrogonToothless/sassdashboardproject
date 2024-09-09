@@ -9,14 +9,18 @@
     // outline: 2px solid red;
 }
 
+body {
+    background-color: #f5f7f9;
+}
+
 .container {
-    background-color: #F5F7F9;
+    // background-color: #F5F7F9;
     display: flex;
     width: 100%;
 }
 
 .sidebar {
-    padding: 1em 2.5em; 
+    padding: 1em 2.5em;
 
     .sidebar-info {
         margin-top: 20px;
@@ -44,6 +48,7 @@
     .sidebar-search {
         margin: 2vh 0;
         max-width: 200px;
+
         input {
             @include variables.sidebar-type;
             border: none;
@@ -59,7 +64,7 @@
         display: flex;
         gap: 8px;
         padding: 6px;
-        margin: 3px 0;
+        margin: 6px 0;
         max-width: 200px;
         border-radius: 8px;
         cursor: pointer;
@@ -88,44 +93,40 @@
 
 .main-container {
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
 
     .main {
+        margin-top: 2.5vh;
         background-color: #fff;
         border-bottom-left-radius: 16px;
         border-top-left-radius: 16px;
         box-shadow: variables.$shadow;
         width: 100%;
+        // height: 95vh;
     }
 }
 
 .main-top {
-    border-top-left-radius: 16px;
-    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin-left: 2.5%;
-    .menu-button {
-        display: inline;
-        width: 50px;
-        height: 50px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+    margin: 1.6em 0;
+    // comments right above and below r what im gonna put in the media qry
+
     .main-title {
         color: #2a2a2a;
         font-family: "articulat-cf", sans-serif;
         font-size: 3em;
         font-weight: 600;
-        padding-top: 10px;
+        text-align: center;
     }
 
-    .main-caption{
+    .main-caption {
         color: #2a2a2a;
-        font-family: "articulat-cf", sans-serif; 
+        font-family: "articulat-cf", sans-serif;
         font-weight: 200;
+        text-align: center;
     }
 }
 
@@ -134,16 +135,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2.5%;
+    gap: clamp(1em, 1.5vw, 3em); // USE CLAMP
+    flex-wrap: wrap;
 
     .middle-flex {
+        min-width: 20em;
         border-radius: 16px;
-        box-shadow: variables.$shadow;
-        width: 30%;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+        width: clamp(20em, 3em + 23vw, 40em); // USE CLAMP
+        // margin: 1em 0;
+        gap: clamp(3em, 5vw, 6em); // USE CLAMP
+        padding: 1.5em;
     }
 
     .revenue {
-        // cursor: pointer;
+        min-height: 15vw;
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -154,24 +161,22 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-left: 2vmin;
 
             .revenue-overall {
                 color: #fff;
                 font-family: "articulat-cf", sans-serif;
-                font-size: 1.5em;
+                font-size: clamp(1.5em, 1.5em + 0.5vw, 3em); // USE CLAMP --> ALSO ON TOTAL SITE VIEWS, ETC.
             }
         }
 
         .revenue-bottom {
-            color: #fff; 
+            color: #fff;
             font-family: "articulat-cf", sans-serif;
-            margin-left: 2vmin;
 
             .gain {
                 display: flex;
                 align-items: center;
-                gap: 1vmin;
+                gap: 0.5em;
 
                 .revenue-percent-gain {
                     background-color: rgba(255, 255, 255, 0.2);
@@ -182,17 +187,18 @@
 
             .revenue-amount {
                 font-weight: 600;
-                font-size: 3em;
+                font-size: clamp(3em, 3em + 1vw, 4.5em);
             }
         }
     }
 
     .revenue:hover {
         transform: translateY(-5px);
-        box-shadow: variables.$shadow;
+        box-shadow: rgba(0, 0, 0, 0.4) 0 5px 10px;
     }
 
     .insight {
+        min-height: 15vw;
         cursor: pointer;
         display: flex;
         flex-direction: column;
@@ -203,19 +209,17 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-left: 1em;
 
             .insight-overall {
                 color: #2a2a2a;
                 font-family: "articulat-cf", sans-serif;
-                font-size: 1.5em;
+                font-size: clamp(1.5em, 1.5em + 0.5vw, 3em);
             }
         }
 
         .insight-bottom {
-            color: #2a2a2a; 
+            color: #2a2a2a;
             font-family: "articulat-cf", sans-serif;
-            margin-left: 1em;
 
             .gain {
                 display: flex;
@@ -231,34 +235,157 @@
 
             .insight-amount {
                 font-weight: 600;
-                font-size: 3em;
+                font-size: clamp(3em, 3em + 1vw, 4.5em);
             }
         }
     }
+
     .insight:hover {
         transform: translateY(-5px);
-        box-shadow: variables.$shadow;
+        box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
+    }
+
+    .finance {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        min-height: 15vw;
+        gap: clamp(0.5em, 1.4vw, 6em); // USE CLAMP
+        // justify-content: space-evenly;
+        transition: transform 300ms ease, box-shadow 250ms ease;
+
+        .finance-overall-arrow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // margin-left: 1em;
+
+            .finance-overall {
+                color: #2a2a2a;
+                font-family: "articulat-cf", sans-serif;
+                font-size: clamp(1.5em, 1.5em + 0.5vw, 3em);
+            }
+        }
+
+        .finance-bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7em;
+            // gap: clamp(0.1em, 0.1em + 0.2w, 1em);
+            color: #2a2a2a;
+            font-family: "articulat-cf", sans-serif;
+            // margin-left: 1em;
+
+            .finance-amount {
+                font-family: "articulat-cf", sans-serif;
+                font-weight: 600;
+                font-size: clamp(3em, 2em + 1vw, 4.5em);
+            }
+
+            .finance-bar {
+                display: flex;
+                width: 100%;
+                height: 3em;
+
+                .filled {
+                    border-top-left-radius: 1em;
+                    border-bottom-left-radius: 1em;
+                    width: 50%;
+                    height: 50px;
+                    background: radial-gradient(circle at 90% 10%, #40a2ca, #345BFC, #5E64EA);
+                }
+                
+                .unfilled {
+                    width: 50%;
+                    height: 50px;
+                    border-top-right-radius: 1em;
+                    border-bottom-right-radius: 1em;
+                    box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+                    // CHANGE THE ABOVE BOX SHADOW TO SOMETHING ELSE
+                }
+            }
+            
+            .finance-legend {
+                display: flex;
+                gap: 0.5em;
+
+                .finance-legend-icon {
+                    border-radius: 50%;
+                    background: radial-gradient(circle at 90% 10%, #40a2ca, #345BFC, #5E64EA);
+                    width: 1em;
+                    height: 1em;
+                }
+            }
+        }
+    }
+
+    .finance:hover {
+        transform: translateY(-5px);
+        box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
+    }
+
+    .main-bottom {
+        // margin-top: 1em;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        // align-items: center;
+        justify-content: center;
+        gap: 2em;
+        margin-bottom: 2em;
+
+        .graph {
+            border-radius: 16px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+            @extend %graphCard;
+            transition: transform 300ms ease, box-shadow 250ms ease;
+        }
+
+        .graph:hover {
+            transform: translateY(-5px);
+            box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
+        }
+
+        .chart-flex {
+            min-width: 20em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 16px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
+            width: clamp(12em, 12em + 16vw, 40em);
+            transition: transform 300ms ease, box-shadow 250ms ease;
+        }
+
+        .chart-flex:hover {
+            transform: translateY(-5px);
+            box-shadow: rgba(0, 0, 0, 0.3) 0 5px 10px;
+        }
+
+        .chart {
+            padding: 1.5em;
+            text-align: center;
+            font-size: 3em;
+            font-family: "articulat-cf", sans-serif;
+        }
     }
 }
 
-.main-bottom {
-    border-bottom-left-radius: 16px;
-    width: 100%;
-    display: flex;
-    // align-items: center;
-    // justify-content: center;
-    gap: 2.5%;
+@media (max-width: 900px) {
 
-    .graph {
-        border-radius: 16px;
-        box-shadow: variables.$shadow;
-        width: 62.5%;
-        // @extend %graphCard;
+    .sidebar {
+        display: none;
     }
 
-    .chart {
-        border-radius: 16px;
-        box-shadow: variables.$shadow;
-        width: 30%;
+    .main {
+        margin-top: 0 !important;
+        border-bottom-left-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .graph {
+        display: none;
     }
 }

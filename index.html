@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sass Dashboard</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://use.typekit.net/aip2jpy.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/0ad91c2e21.js" crossorigin="anonymous"></script>
@@ -14,136 +15,167 @@
 
 <body>
     <div class="container">
-    <aside class="sidebar">
-        <div class="sidebar-info">
-            <div class="sidebar-name-email">
-                <div class="sidebar-name">John Doe</div>
-                <div class="sidebar-email">johndoe@example.com</div>
-            </div>
-        </div>
-        <div class="sidebar-separator separator"></div>
-        <div class="sidebar-search">
-            <input type="text" name="sidebar-search" placeholder="Search">
-        </div>
-        <div class="sidebar-links">
-            <div class="sidebar-tab sidebar-dashboard">
-                <i class="fa-solid fa-house"></i>
-                <div>Dashboard</div>
-            </div>
-            <div class="sidebar-tab">
-                <i class="fa-solid fa-user"></i>
-                <div class="sidebar-accounts">Accounts</div>
-            </div>
-            <div class="sidebar-tab">
-                <i class="fa-solid fa-credit-card"></i>
-                <div class="sidebar-cards">Cards</div>
-            </div>
-            <div class="sidebar-tab">
-                <i class="fa-solid fa-cart-plus"></i>
-                <div>Transactions</div>
-            </div>
-            <div class="sidebar-tab">
-                <i class="fa-solid fa-layer-group"></i>
-                <div>Spend Groups</div>
-            </div>
-            <div class="sidebar-tab">
-                <i class="fa-solid fa-chart-line"></i>
-                <div>Integrations</div>
-            </div>
-            <div class="sidebar-tab">
-                <i class="fa-solid fa-user-group"></i>
-                <div>Payees</div>
-            </div>
-            <div class="sidebar-tab">
-                <i class="fa-solid fa-money-check-dollar"></i>
-                <div>Invoices</div>
-            </div>
-        </div>
-    </aside>
 
-    <div class="main-container">
-        <section class="main">
-
-            <div class="main-top">
-                <div class="menu-button">
-                    <button onclick="menuOpen()">
-                        <i class="fa-solid fa-bars"></i>
-                    </button>
-                </div>
-                <div class="main-title">Dashboard</div>
-                <div class="main-caption">Your key business metrics at a glance.</div>
-            </div>
-            <div class="main-middle">
-
-            <div class="revenue middle-flex">
-                <div class="revenue-overall-arrow">
-                    <div class="revenue-overall">Overall Revenue</div>
-                    <!-- <i class="fa-solid fa-up-right-and-down-left-from-center"></i> -->
-                </div>
-                <div class="revenue-bottom">
-                    <div class="revenue-amount">$25,912</div>
-                    <div class="gain">
-                        <div class="revenue-percent-gain">+1.9%</div>
-                        <div class="revenue-gain-message">from last month</div>
-                    </div>
+        <!------------------------------------------------>
+        <!--------------------SIDEBAR--------------------->
+        <!------------------------------------------------>
+        <aside class="sidebar">
+            <div class="sidebar-info">
+                <div class="sidebar-name-email">
+                    <div class="sidebar-name">John Doe</div>
+                    <div class="sidebar-email">johndoe@example.com</div>
                 </div>
             </div>
-
-            <div class="insight middle-flex">
-                <div class="insight-overall-arrow">
-                    <div class="insight-overall">Total Site Views</div>
-                    <!-- <i class="fa-solid fa-up-right-and-down-left-from-center"></i> -->
+            <div class="sidebar-separator separator"></div>
+            <div class="sidebar-search">
+                <input type="text" name="sidebar-search" placeholder="Search">
+            </div>
+            <div class="sidebar-links">
+                <div class="sidebar-tab sidebar-dashboard">
+                    <i class="fa-solid fa-house"></i>
+                    <div>Dashboard</div>
                 </div>
-                <div class="insight-bottom">
-                    <div class="insight-amount">129,521</div>
-                    <div class="gain">
-                        <div class="insight-percent-gain">+1.2%</div>
-                        <div class="insight-gain-message">from last month</div>
-                    </div>
+                <div class="sidebar-tab">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="sidebar-accounts">Accounts</div>
+                </div>
+                <div class="sidebar-tab">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <div class="sidebar-cards">Cards</div>
+                </div>
+                <div class="sidebar-tab">
+                    <i class="fa-solid fa-cart-plus"></i>
+                    <div>Transactions</div>
+                </div>
+                <div class="sidebar-tab">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <div>Spend Groups</div>
+                </div>
+                <div class="sidebar-tab">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <div>Integrations</div>
+                </div>
+                <div class="sidebar-tab">
+                    <i class="fa-solid fa-user-group"></i>
+                    <div>Payees</div>
+                </div>
+                <div class="sidebar-tab">
+                    <i class="fa-solid fa-money-check-dollar"></i>
+                    <div>Invoices</div>
                 </div>
             </div>
+        </aside>
 
-            <div class="finance middle-flex"></div>
-    </div>
-            
-            <div class="main-bottom">
-                <div class="graph">
-                    <div class="summary-flex">
+        <div class="main-container">
+            <section class="main">
+                
+                <div class="main-top">
+                    <div class="main-title">Dashboard</div>
+                    <div class="main-caption">Your key business metrics at a glance.</div>
+                </div>
 
-                        <div class="sales-summary">Sales Summary</div>
-
-                        <div class="range-flex">
-                            <div class="time-range">
-                                <div>This Year</div>
-                                <i class="fa-solid fa-arrow-down"></i>
-                            </div>
-                            <div class="summary">
-                                <div>Summary</div>
-                                <i class="fa-solid fa-arrow-down"></i>
-                            </div>
-                            <div class="three-dots">
-                                <i class="fa-solid fa-ellipsis"></i>
+                <div class="main-middle">
+                    <div class="revenue middle-flex">
+                        <div class="revenue-overall-arrow">
+                            <div class="revenue-overall">Overall Revenue</div>
+                            <!-- <i class="fa-solid fa-up-right-and-down-left-from-center"></i> -->
+                        </div>
+                        <div class="revenue-bottom">
+                            <div class="revenue-amount">$25,912</div>
+                            <div class="gain">
+                                <div class="revenue-percent-gain">+1.9%</div>
+                                <div class="revenue-gain-message">from last month</div>
                             </div>
                         </div>
-
                     </div>
-                    
-                    <div class="legend">
-                        <div class="sales-legend">
-                            <div></div>
-                            <div>Sales</div>
+
+                    <div class="insight middle-flex">
+                        <div class="insight-overall-arrow">
+                            <div class="insight-overall">Total Site Views</div>
+                            <!-- <i class="fa-solid fa-up-right-and-down-left-from-center"></i> -->
                         </div>
-                        <div class="insight-legend">
-                            <div></div>
-                            <div>Insight</div>
+                        <div class="insight-bottom">
+                            <div class="insight-amount">129,521</div>
+                            <div class="gain">
+                                <div class="insight-percent-gain">+1.2%</div>
+                                <div class="insight-gain-message">from last month</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="finance middle-flex">
+
+                        <div class="finance-overall-arrow">
+                            <div class="finance-overall">Finance</div>
+                            <!-- <i class="fa-solid fa-up-right-and-down-left-from-center"></i> -->
+                        </div>
+
+                        <div class="finance-bottom">
+
+                            <div class="finance-amount">$9,421</div>
+
+                            <div class="finance-bar">
+                                <div class="filled"></div>
+                                <div class="unfilled"></div>
+                            </div>
+
+                            <div class="finance-legend">
+                                <div class="finance-legend-icon"></div>
+                                <div class="finance-profit">Profit</div>
+                            </div>
+
                         </div>
                     </div>
 
-                </div>
-                <div class="chart"></div>
-            </div>
-        </section>
-    </div>
+                    <div class="main-bottom">
+
+                        <div class="chart-flex">
+                            <div class="chart">Something Cool Here</div>
+                        </div>
+
+
+                        <div class="graph">
+                            <div class="summary-flex">
+
+                                <div class="sales-summary">Sales Summary</div>
+
+                                <div class="range-flex">
+                                    <div class="time-range">
+                                        <div>This Year</div>
+                                        <i class="fa-solid fa-arrow-down"></i>
+                                    </div>
+                                    <div class="summary">
+                                        <div>Summary</div>
+                                        <i class="fa-solid fa-arrow-down"></i>
+                                    </div>
+                                    <!-- <div class="three-dots">
+                                        <i class="fa-solid fa-ellipsis"></i>
+                                    </div> -->
+                                    <!-- Have the three dots reappear for media query -->
+                                </div>
+                            </div>
+
+                            <div class="legend">
+                                <div class="sales-legend">
+                                    <div class="sales-icon"></div>
+                                    <div>Sales</div>
+                                </div>
+                                <div class="insight-legend">
+                                    <div class="insight-icon"></div>
+                                    <div>Site Views</div>
+                                </div>
+                            </div>
+
+                            <div class="faux-chart">
+                                <img src="./images/faux-graph.png" draggable="false">
+                            </div>
+
+                        </div>
+
+                    </div>
+            </section>
+        </div>
     </div>
 </body>
+
 </html>
