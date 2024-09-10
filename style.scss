@@ -45,6 +45,7 @@ body {
         }
     }
 }
+
 .sidebar , .sidebar-full{
     padding: 1em 2.5em;
     
@@ -137,7 +138,7 @@ body {
 .main-top {
     display: flex;
     flex-direction: column;
-    margin: 1.6em 0;
+    margin: 2em 0;
     // comments right above and below r what im gonna put in the media qry
     .menu-container {
         width: 40px;
@@ -175,7 +176,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(1em, 1.5vw, 3em); // USE CLAMP
+    gap: clamp(1em, 2vw, 3em); // USE CLAMP
     flex-wrap: wrap;
 
     .middle-flex {
@@ -371,6 +372,7 @@ body {
         flex-wrap: wrap;
         // align-items: center;
         justify-content: center;
+        padding-bottom: 0.5vw;
         gap: 2em;
         margin-bottom: 2em;
 
