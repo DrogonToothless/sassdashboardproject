@@ -197,7 +197,7 @@ body {
 .main-top {
   display: flex;
   flex-direction: column;
-  margin: 1.6em 0;
+  margin: 2em 0;
 }
 .main-top .menu-container {
   width: 40px;
@@ -233,7 +233,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(1em, 1.5vw, 3em);
+  gap: clamp(1em, 2vw, 3em);
   flex-wrap: wrap;
 }
 .main-middle .middle-flex {
@@ -393,6 +393,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding-bottom: 0.5vw;
   gap: 2em;
   margin-bottom: 2em;
 }
