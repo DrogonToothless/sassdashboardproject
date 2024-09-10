@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // outline: 2px solid red;
 }
 
 body {
@@ -13,7 +12,7 @@ body {
 }
 
 .container {
-    // background-color: #F5F7F9;
+    // height: 95vh; 
     display: flex;
     width: 100%;
 }
@@ -86,7 +85,7 @@ body {
     .sidebar-dashboard {
         background-color: #fff;
         color: #4a4b52;
-        box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px; // turn this into a variable
+        box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
     }
 }
 
@@ -110,8 +109,7 @@ body {
 .main-top {
     display: flex;
     flex-direction: column;
-    margin: 1.6em 0;
-    // comments right above and below r what im gonna put in the media qry
+    margin: 2em 0;
 
     .main-title {
         color: #2a2a2a;
@@ -134,16 +132,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(1em, 1.5vw, 3em); // USE CLAMP
+    gap: clamp(1em, 1.75vw, 3em);
     flex-wrap: wrap;
 
     .middle-flex {
         min-width: 20em;
         border-radius: 16px;
         box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-        width: clamp(20em, 3em + 23vw, 40em); // USE CLAMP
-        // margin: 1em 0;
-        gap: clamp(3em, 5vw, 6em); // USE CLAMP
+        width: clamp(20em, 3em + 23vw, 40em);
+
+        gap: clamp(3em, 5vw, 6em);
         padding: 1.5em;
     }
 
@@ -164,7 +162,7 @@ body {
             .revenue-overall {
                 color: #fff;
                 font-family: "articulat-cf", sans-serif;
-                font-size: clamp(1.5em, 1.5em + 0.5vw, 3em); // USE CLAMP --> ALSO ON TOTAL SITE VIEWS, ETC.
+                font-size: clamp(1.5em, 1.5em + 0.5vw, 3em);
             }
         }
 
@@ -249,15 +247,13 @@ body {
         display: flex;
         flex-direction: column;
         min-height: 15vw;
-        gap: clamp(0.5em, 1.4vw, 6em); // USE CLAMP
-        // justify-content: space-evenly;
+        gap: clamp(0.5em, 1.4vw, 6em);
         transition: transform 300ms ease, box-shadow 250ms ease;
 
         .finance-overall-arrow {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            // margin-left: 1em;
 
             .finance-overall {
                 color: #2a2a2a;
@@ -270,10 +266,8 @@ body {
             display: flex;
             flex-direction: column;
             gap: 0.7em;
-            // gap: clamp(0.1em, 0.1em + 0.2w, 1em);
             color: #2a2a2a;
             font-family: "articulat-cf", sans-serif;
-            // margin-left: 1em;
 
             .finance-amount {
                 font-family: "articulat-cf", sans-serif;
@@ -300,7 +294,6 @@ body {
                     border-top-right-radius: 1em;
                     border-bottom-right-radius: 1em;
                     box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-                    // CHANGE THE ABOVE BOX SHADOW TO SOMETHING ELSE
                 }
             }
             
@@ -324,11 +317,9 @@ body {
     }
 
     .main-bottom {
-        // margin-top: 1em;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        // align-items: center;
         justify-content: center;
         gap: 2em;
         margin-bottom: 2em;
