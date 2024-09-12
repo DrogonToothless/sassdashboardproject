@@ -1,10 +1,6 @@
 // work on the graph goes here...
 @use '../variables';
 
-// * {
-//     // outline: 2px solid red;
-// }
-
 %graphCard {
 
     .summary-flex {
@@ -16,12 +12,10 @@
         justify-content: space-between; 
 
         .sales-summary {
-            // margin-left: 0.5em;
             font-size: 2.5em;
         }
     
         .range-flex {
-            // margin-top: 10px;
             display: flex;
             align-items: center;
             gap: 0.5em;
@@ -61,14 +55,6 @@
             .summary:hover {
                 box-shadow: rgba(0, 0, 0, 0.4) 0 0 3px;
             }
-
-            // .three-dots {
-            //     // margin-right: 5px;
-            //     // font-size: 1.5em;
-            //     // // border-radius: 50%;
-            //     // // box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-            //     // cursor: pointer;
-            // }
         }
     }
     .legend {
@@ -102,17 +88,14 @@
         }
     }
     .faux-chart {
-        // margin-left: 1.6em;
-        // outline: 2px solid red;
         display: flex;
         justify-content: center;
         margin-bottom: 1em;
         width: 100%;
 
         img {
-            // outline: 2px solid red;
             width: clamp(24em, 22em + 26.25vw, 52em);
-            height: clamp(10em, 8em + 10vh, 22em); // USE CLAMP (MAYBE)
+            height: clamp(10em, 8em + 10vh, 22em);
         }
     }
 }

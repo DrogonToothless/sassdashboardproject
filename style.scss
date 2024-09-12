@@ -6,7 +6,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // outline: 2px solid red;
 }
 
 body {
@@ -14,7 +13,6 @@ body {
 }
 
 .container {
-    // background-color: #F5F7F9;
     display: flex;
     width: 100%;
 }
@@ -29,11 +27,13 @@ body {
     background-color: #f5f7f9;
     width: 100%;
     height: 100%;
+
     .menu-container {
         width: 40px;
         aspect-ratio: 1/1;
         margin: 0 auto;
         margin-bottom: 15px;
+        
         .menu-button {
             width: 100%;
             height: 100%;
@@ -131,7 +131,6 @@ body {
         border-top-left-radius: 16px;
         box-shadow: variables.$shadow;
         width: 100%;
-        // height: 95vh;
     }
 }
 
@@ -139,12 +138,13 @@ body {
     display: flex;
     flex-direction: column;
     margin: 2em 0;
-    // comments right above and below r what im gonna put in the media qry
+
     .menu-container {
         width: 40px;
         aspect-ratio: 1/1;
         margin: 0 auto;
         margin-bottom: 15px;
+
         .menu-button {
             width: 100%;
             height: 100%;
@@ -157,7 +157,7 @@ body {
     }
     .main-title {
         color: #2a2a2a;
-        font-family: "articulat-cf", sans-serif;
+        font-family: variables.$fontList;
         font-size: 3em;
         font-weight: 600;
         text-align: center;
@@ -165,7 +165,7 @@ body {
 
     .main-caption {
         color: #2a2a2a;
-        font-family: "articulat-cf", sans-serif;
+        font-family: variables.$fontList;
         font-weight: 200;
         text-align: center;
     }
@@ -173,19 +173,16 @@ body {
 
 .main-middle {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: clamp(1em, 2vw, 3em); // USE CLAMP
+    @include variables.flex-center;
+    gap: clamp(1em, 2vw, 3em);
     flex-wrap: wrap;
 
     .middle-flex {
         min-width: 20em;
         border-radius: 16px;
-        box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-        width: clamp(20em, 3em + 23vw, 40em); // USE CLAMP
-        // margin: 1em 0;
-        gap: clamp(3em, 5vw, 6em); // USE CLAMP
+        box-shadow: variables.$shadow;
+        width: clamp(20em, 3em + 23vw, 40em);
+        gap: clamp(3em, 5vw, 6em);
         padding: 1.5em;
     }
 
@@ -205,14 +202,14 @@ body {
 
             .revenue-overall {
                 color: #fff;
-                font-family: "articulat-cf", sans-serif;
-                font-size: clamp(1.5em, 1.5em + 0.5vw, 3em); // USE CLAMP --> ALSO ON TOTAL SITE VIEWS, ETC.
+                font-family: variables.$fontList;
+                font-size: clamp(1.5em, 1.5em + 0.5vw, 3em);
             }
         }
 
         .revenue-bottom {
             color: #fff;
-            font-family: "articulat-cf", sans-serif;
+            font-family: variables.$fontList;
 
             .gain {
                 display: flex;
@@ -253,14 +250,14 @@ body {
 
             .insight-overall {
                 color: #2a2a2a;
-                font-family: "articulat-cf", sans-serif;
+                font-family: variables.$fontList;
                 font-size: clamp(1.5em, 1.5em + 0.5vw, 3em);
             }
         }
 
         .insight-bottom {
             color: #2a2a2a;
-            font-family: "articulat-cf", sans-serif;
+            font-family: variables.$fontList;
 
             .gain {
                 display: flex;
@@ -291,19 +288,17 @@ body {
         display: flex;
         flex-direction: column;
         min-height: 15vw;
-        gap: clamp(0.5em, 1.4vw, 6em); // USE CLAMP
-        // justify-content: space-evenly;
+        gap: clamp(0.5em, 1.4vw, 6em);
         transition: transform 300ms ease, box-shadow 250ms ease;
 
         .finance-overall-arrow {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            // margin-left: 1em;
 
             .finance-overall {
                 color: #2a2a2a;
-                font-family: "articulat-cf", sans-serif;
+                font-family: variables.$fontList;
                 font-size: clamp(1.5em, 1.5em + 0.5vw, 3em);
             }
         }
@@ -312,13 +307,11 @@ body {
             display: flex;
             flex-direction: column;
             gap: 0.7em;
-            // gap: clamp(0.1em, 0.1em + 0.2w, 1em);
             color: #2a2a2a;
-            font-family: "articulat-cf", sans-serif;
-            // margin-left: 1em;
+            font-family: variables.$fontList;
 
             .finance-amount {
-                font-family: "articulat-cf", sans-serif;
+                font-family: variables.$fontList;
                 font-weight: 600;
                 font-size: clamp(3em, 2em + 1vw, 4.5em);
             }
@@ -342,7 +335,6 @@ body {
                     border-top-right-radius: 1em;
                     border-bottom-right-radius: 1em;
                     box-shadow: rgba(0, 0, 0, 0.3) 0 0 2px;
-                    // CHANGE THE ABOVE BOX SHADOW TO SOMETHING ELSE
                 }
             }
             
@@ -366,11 +358,9 @@ body {
     }
 
     .main-bottom {
-        // margin-top: 1em;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        // align-items: center;
         justify-content: center;
         padding-bottom: 0.5vw;
         gap: 2em;
@@ -408,10 +398,11 @@ body {
             padding: 1.5em;
             text-align: center;
             font-size: 3em;
-            font-family: "articulat-cf", sans-serif;
+            font-family: variables.$fontList;
         }
     }
 }
+
 @media screen and (min-width: 900px) {
     .menu-container {
         display: none;

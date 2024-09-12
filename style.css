@@ -248,8 +248,8 @@ body {
 .main-middle {
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: clamp(1em, 2vw, 3em);
   flex-wrap: wrap;
 }
